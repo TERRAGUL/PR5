@@ -1,0 +1,33 @@
+﻿<Window x:Class="R5.CreateUser"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:R5"
+        mc:Ignorable="d"
+        Title="CreateUser" Height="300" Width="800" Background="PeachPuff">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="NameSotr" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Имя сотрудника" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="174"/>
+        <TextBox x:Name="SurnameSotr" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Фамилия сотрудника" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="174" Margin="0,30,0,0"/>
+        <TextBox x:Name="SalarySotr" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Зарплата в доллярях" Margin="0,64,0,0" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="174"/>
+        <TextBox x:Name="LoginSotr" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Логин" TextAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Top" Width="174" Margin="0,104,0,0"/>
+        <ComboBox x:Name="Doldol" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Должность" Margin="0,180,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="174" SelectionChanged="ComboBox_SelectionChanged"/>
+        <PasswordBox x:Name="PasswordSotr" HorizontalAlignment="Center" materialDesign:HintAssist.Hint="Пароль" Margin="0,142,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="174"/>
+        <Button Content="Создать" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Width="174" Height="27" Click="Create_Employee"/>
+        <Button Content="Изменить" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Width="174" Height="27"/>
+
+        
+        
+        <DataGrid x:Name="SotGRD" Grid.Column="1" Margin="10">
+
+        </DataGrid>
+        
+
+    </Grid>
+</Window>
